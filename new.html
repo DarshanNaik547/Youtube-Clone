@@ -1,0 +1,622 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Material Icons -->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Youtube UI Clone</title>
+  </head>
+  <body>
+    <!-- Header Starts -->
+    <div class="header">
+      <div class="header__left">
+        <i id="menu" class="material-icons">menu</i>
+        <img src="youtube.webp" alt="" />
+      </div>
+
+      <div class="header__search">
+        <form action="">
+          <input type="text" placeholder="Search" />
+          <button><i class="material-icons">search</i></button>
+        </form>
+      </div>
+
+      <div class="header__icons">
+        <i class="material-icons display-this">search</i>
+        <i class="material-icons">videocam</i>
+        <i class="material-icons">apps</i>
+        <i class="material-icons">notifications</i>
+        <i class="material-icons display-this">account_circle</i>
+      </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="mainBody">
+      <!-- Sidebar Starts -->
+      <div class="sidebar">
+        <div class="sidebar__categories">
+          <div class="sidebar__category">
+            <i class="material-icons">home</i>
+            <span>Home</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">local_fire_department</i>
+            <span>Trending</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">subscriptions</i>
+            <span>Subcriptions</span>
+          </div>
+        </div>
+        <hr />
+        <div class="sidebar__categories">
+          <div class="sidebar__category">
+            <i class="material-icons">library_add_check</i>
+            <span>Library</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">history</i>
+            <span>History</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">play_arrow</i>
+            <span>Your Videos</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">watch_later</i>
+            <span>Watch Later</span>
+          </div>
+          <div class="sidebar__category">
+            <i class="material-icons">thumb_up</i>
+            <span>Liked Videos</span>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <!-- Sidebar Ends -->
+
+      <!-- Videos Section -->
+      <div class="videos">
+        <h1>Recommended</h1>
+
+        <div class="videos__container">
+          <!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <a href="https://www.youtube.com/watch?v=myDjzsPzWdY">
+                <img
+                  src="https://i.ytimg.com/vi/myDjzsPzWdY/maxresdefault.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="data:image/png;base64,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"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 10 Programming Languages to Learn in 2024 | Best
+                  Programming Languages to Learn
+                </h3>
+                <a href="https://www.youtube.com/watch?v=myDjzsPzWdY"
+                  >simplilearn</a
+                >
+                <span>10M Views • 1 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+
+          <!-- Single Video starts -->
+          <div class="video">
+            <div class="video__thumbnail">
+              <a href=""
+                ><img
+                  src="https://i.ytimg.com/vi/Fqfcu329CI0/maxresdefault.jpg"
+                  alt=""
+              /></a>
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://telecomtalk.info/wp-content/uploads/2022/06/nothing-to-manufacture-its-first-smartphone-locally.png"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Nothing Phone (1) full review</h3>
+                <a href="">NothingTech</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Single Video Ends -->
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://res.klook.com/image/upload/q_85/c_fill,w_750/v1640140560/blog/vsss72njiq5g0o41m7dh.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://res.klook.com/image/upload/q_85/c_fill,w_750/v1640140560/blog/vsss72njiq5g0o41m7dh.jpg"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Bella Ciao Full Song | La Casa De Papel | Money Heist |
+                  Netflix India
+                </h3>
+                <a href="">Netflix</a>
+                <span>10M Views • 11 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+                <a href=""> Chispa Motivation</a>
+                <span>10M Views • 1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://i.ytimg.com/vi/mJgBOIoGihA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAEhop76yHFBSowKb7PbZHdonY2BA"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  HTML5 Website Project for Beginners | First HTML Project
+                  Tutorial - YouTube
+                </h3>
+                <a href="">Coding Addict</a>
+                <span>179K • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://i.ytimg.com/vi/JkeyKeK3V24/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Build 5 Projects With HTML, CSS & JavaScript</h3>
+                <a href=""> freeCodeCamp.org </a>
+                <span>470K Views • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://i.ytimg.com/vi/MGElAqWJDUY/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Build Real Time Face Detection With JavaScriptBest Laptop
+                  Under 40000⚡Top 5 Best Intel 12th Gen Laptops Under
+                  40000⚡Laptop Under 40000 2023
+                </h3>
+                <a href="">Tech</a>
+                <span>875K Views • 1 Year Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://i.ytimg.com/vi/k1RI5locZE4/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.googleusercontent.com/sYxOXhBDh0-bvcc-PVdya_NHbwqga7AKWdUgH_QaErfJ0NkbJJGZicfbeq8J-2Yt-7TyW3K_gw=s176-c-k-c0x00ffffff-no-rj-mo"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  AWS Tutorial For Beginners | AWS Full Course - Learn AWS In 10
+                  Hours | AWS Training |
+                </h3>
+                <a href="">Edureka</a>
+                <span>36K Views • 1 Day Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="http://aninex.com/images/srvc/web_de_icon.png"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best
+                  Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/YpTmcCBBdTE/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="http://aninex.com/images/srvc/web_de_icon.png"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Build A Password Generator with React JS - Beginners Tutorial
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnh53ZRIGnyzC28QrfuggCINb3cfNbNWo4Uc6qR9=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Bella Ciao Full Song | La Casa De Papel | Money Heist |
+                  Netflix India
+                </h3>
+                <a href="">Netflix</a>
+                <span>10M Views • 11 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+                <a href=""> Chispa Motivation</a>
+                <span>10M Views • 1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/2Ji-clqUYnA/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Javascript Fundamentals</h3>
+                <a href="">Coding Addict</a>
+                <span>179K • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/3PHXvlpOkf4/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Build 15 JavaScript Projects - Vanilla JavaScript Course
+                </h3>
+                <a href=""> freeCodeCamp.org </a>
+                <span>470K Views • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/CVClHLwv-4I/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Build Real Time Face Detection With JavaScript</h3>
+                <a href=""> Web Dev Simplified </a>
+                <span>875K Views • 1 Year Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/ulprqHHWlng/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>AWS Basics for Beginners - Full Course</h3>
+                <a href=""> freeCodeCamp.org </a>
+                <span>36K Views • 1 Day Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/PpXUTUXU7Qc/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="http://aninex.com/images/srvc/web_de_icon.png"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Top 5 Programming Languages to Learn in 2021 | Best
+                  Programming Languages to Learn
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/YpTmcCBBdTE/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="http://aninex.com/images/srvc/web_de_icon.png"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Build A Password Generator with React JS - Beginners Tutorial
+                </h3>
+                <a href="">FutureCoders</a>
+                <span>10M Views • 3 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/46cXFUzR9XM/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnh53ZRIGnyzC28QrfuggCINb3cfNbNWo4Uc6qR9=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Bella Ciao Full Song | La Casa De Papel | Money Heist |
+                  Netflix India
+                </h3>
+                <a href="">Netflix</a>
+                <span>10M Views • 11 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/d2na6sCyM5Q/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhESPVEatju_1yE-03-KLeSrnSLc5yy0RcvhPd5Lg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>DON'T EVER GIVE UP - Elon Musk (Motivational Video)</h3>
+                <a href=""> Chispa Motivation</a>
+                <span>10M Views • 1 Month Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/2Ji-clqUYnA/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Javascript Fundamentals</h3>
+                <a href="">Coding Addict</a>
+                <span>179K • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/3PHXvlpOkf4/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>
+                  Build 15 JavaScript Projects - Vanilla JavaScript Course
+                </h3>
+                <a href=""> freeCodeCamp.org </a>
+                <span>470K Views • 8 Months Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/CVClHLwv-4I/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnhIz_0Su6HhW6Ym50QCroJCAnF10X9xnnMDboN2=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>Build Real Time Face Detection With JavaScript</h3>
+                <a href=""> Web Dev Simplified </a>
+                <span>875K Views • 1 Year Ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video">
+            <div class="video__thumbnail">
+              <img
+                src="https://img.youtube.com/vi/ulprqHHWlng/maxresdefault.jpg"
+                alt="" />
+            </div>
+            <div class="video__details">
+              <div class="author">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s48-c-k-c0x00ffffff-no-rj"
+                  alt="" />
+              </div>
+              <div class="title">
+                <h3>AWS Basics for Beginners - Full Course</h3>
+                <a href=""> freeCodeCamp.org </a>
+                <span>36K Views • 1 Day Ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <!-- Main Body Ends -->
+  </body>
+</html>
